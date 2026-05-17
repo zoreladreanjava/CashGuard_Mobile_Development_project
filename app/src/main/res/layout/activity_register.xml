@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_teal"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/cashguard_logo"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="CashGuard Logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginBottom="32dp"/>
+
+    <EditText
+        android:id="@+id/etRegUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_hint"
+        android:background="@drawable/bg_edit_text"
+        android:layout_marginBottom="16dp"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/etRegPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_hint"
+        android:background="@drawable/bg_edit_text"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etRegName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Full Name"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_hint"
+        android:background="@drawable/bg_edit_text"
+        android:layout_marginBottom="32dp"
+        android:inputType="textPersonName"/>
+
+    <Button
+        android:id="@+id/btnDoRegister"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="Create Account"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_button_primary"
+        android:textColor="@color/white"
+        android:layout_marginBottom="16dp"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <Button
+        android:id="@+id/btnGoToLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Already have account? Login"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"
+        android:textColor="@color/white"
+        style="?android:attr/borderlessButtonStyle"/>
+</LinearLayout>

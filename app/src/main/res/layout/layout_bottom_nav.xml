@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1B3A4A"
+    android:orientation="horizontal"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:elevation="12dp">
+
+    <Button
+        android:id="@+id/btnNavHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Home"
+        android:textSize="10sp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/text_hint"
+        android:textAllCaps="false"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <Button
+        android:id="@+id/btnNavReports"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Reports"
+        android:textSize="10sp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/text_hint"
+        android:textAllCaps="false"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <Button
+        android:id="@+id/btnNavTransactions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Trans"
+        android:textSize="10sp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/text_hint"
+        android:textAllCaps="false"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <Button
+        android:id="@+id/btnNavHistory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="History"
+        android:textSize="10sp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/text_hint"
+        android:textAllCaps="false"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <Button
+        android:id="@+id/btnNavSettings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Settings"
+        android:textSize="10sp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/text_hint"
+        android:textAllCaps="false"
+        style="?android:attr/borderlessButtonStyle"/>
+</LinearLayout>
