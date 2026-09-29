@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_teal"
@@ -60,14 +61,31 @@
                     android:textAllCaps="true"
                     android:layout_marginBottom="8dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="₱5,420.00"
-                    android:textColor="@color/white"
-                    android:textSize="32sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="16dp"/>
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/tvWalletBalance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="₱5,420.00"
+                        android:textColor="@color/white"
+                        android:textSize="32sp"
+                        android:textStyle="bold"/>
+                    <Button
+                        android:id="@+id/btnAddBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+ Add"
+                        android:textSize="12sp"
+                        android:backgroundTint="@color/accent_green"
+                        android:textColor="@color/white"
+                        android:padding="8dp"
+                        style="?android:attr/borderlessButtonStyle"/>
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -78,11 +96,11 @@
                     android:letterSpacing="0.1"/>
             </LinearLayout>
 
-            <!-- List Section -->
+            <!-- Summary Section -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Recent Transactions"
+                android:text="Transaction Summary"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -92,34 +110,69 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <!-- Transaction Item 1 -->
+
+                <!-- Deposits Summary -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="16dp"
                     android:background="@drawable/bg_rounded_card"
+                    android:padding="20dp"
                     android:layout_marginBottom="12dp"
-                    android:gravity="center_vertical"
-                    android:elevation="1dp">
-                    <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:buttonTint="@color/accent_green"/>
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Groceries" android:textColor="@color/white" android:textSize="16sp" android:layout_marginStart="8dp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-₱50.00" android:textColor="@color/error_red" android:textStyle="bold" android:textSize="16sp"/>
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/arrow_down_float"
+                        android:rotation="180"
+                        app:tint="@color/accent_green"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Total Deposits"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:layout_marginStart="12dp"/>
+                    <TextView
+                        android:id="@+id/tvTotalDeposits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₱0.00"
+                        android:textColor="@color/accent_green"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
                 </LinearLayout>
 
-                <!-- Transaction Item 2 -->
+                <!-- Withdrawals Summary -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="16dp"
                     android:background="@drawable/bg_rounded_card"
-                    android:layout_marginBottom="12dp"
-                    android:gravity="center_vertical"
-                    android:elevation="1dp">
-                    <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:buttonTint="@color/accent_green"/>
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Salary Deposit" android:textColor="@color/white" android:textSize="16sp" android:layout_marginStart="8dp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+₱2,500.00" android:textColor="@color/accent_green" android:textStyle="bold" android:textSize="16sp"/>
+                    android:padding="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/arrow_down_float"
+                        app:tint="@color/error_red"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Total Spending"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:layout_marginStart="12dp"/>
+                    <TextView
+                        android:id="@+id/tvTotalWithdrawals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₱0.00"
+                        android:textColor="@color/error_red"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
                 </LinearLayout>
             </LinearLayout>
 

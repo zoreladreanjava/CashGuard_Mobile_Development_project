@@ -36,19 +36,22 @@
                 android:elevation="4dp">
 
                 <TextView
+                    android:id="@+id/tvGoalProgress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Savings Goal Graph"
+                    android:text="0% of your Goal"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="16dp"/>
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp"/>
 
-                <View
+                <ProgressBar
+                    android:id="@+id/pbGoalGraph"
+                    style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="160dp"
-                    android:background="@color/accent_green"
-                    android:alpha="0.2"/>
+                    android:layout_height="24dp"
+                    android:progressDrawable="@drawable/bg_progress_custom"
+                    android:progress="45"
+                    android:max="100"/>
             </LinearLayout>
 
             <!-- Saving Progress Graph Section -->
@@ -64,17 +67,29 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Saving Progress Graph"
+                    android:text="Spending Progress Graph"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:layout_marginBottom="16dp"/>
 
-                <View
+                <TextView
+                    android:id="@+id/tvSpendingProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Budget Used"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp"/>
+
+                <ProgressBar
+                    android:id="@+id/pbSpendingGraph"
+                    style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="160dp"
-                    android:background="@color/accent_green"
-                    android:alpha="0.2"/>
+                    android:layout_height="24dp"
+                    android:progressDrawable="@drawable/bg_progress_custom"
+                    android:progress="60"
+                    android:max="100"/>
             </LinearLayout>
 
         </LinearLayout>

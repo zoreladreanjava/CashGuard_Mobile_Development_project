@@ -4,8 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/cashguard_logo"
         android:label="CashGuard"
+        android:roundIcon="@drawable/cashguard_logo"
         android:theme="@style/Theme.CashGuard">
 
         <activity android:name=".LoginActivity"

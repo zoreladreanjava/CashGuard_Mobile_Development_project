@@ -14,9 +14,30 @@ class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         UserManager.init(this)
+        FinanceManager.init(this)
+        TransactionManager.init(this)
         setContentView(R.layout.activity_dashboard)
 
+        updateGraphs()
         setupBottomNav()
+    }
+
+    private fun updateGraphs() {
+        val currentUser = UserManager.currentUser?.username ?: "demo"
+        val totalSavings = FinanceManager.getTotalSavings()
+        val savingsGoal = FinanceManager.getSavingsGoal()
+        val totalSpending = FinanceManager.getMonthlySpending(currentUser)
+        
+        // Savings Goal Calculation
+        val goalPercentage = ((totalSavings / savingsGoal) * 100).toInt().coerceIn(0, 100)
+        findViewById<android.widget.TextView>(R.id.tvGoalProgress).text = "$goalPercentage% of your ₱${"%,.0f".format(savingsGoal)} goal"
+        findViewById<android.widget.ProgressBar>(R.id.pbGoalGraph).progress = goalPercentage
+
+        // Spending Calculation (Assuming a 50k monthly limit for demo)
+        val spendingLimit = 50000.0
+        val spendingPercentage = ((totalSpending / spendingLimit) * 100).toInt().coerceIn(0, 100)
+        findViewById<android.widget.TextView>(R.id.tvSpendingProgress).text = "Used ₱${"%,.2f".format(totalSpending)} of ₱50k budget"
+        findViewById<android.widget.ProgressBar>(R.id.pbSpendingGraph).progress = spendingPercentage
     }
 
     private fun setupBottomNav() {
