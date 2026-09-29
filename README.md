@@ -131,8 +131,9 @@ The app module uses compile SDK 34, target SDK 34, and minimum SDK 24. The proje
 ## Project structure
 
   
+```text
 CashGuard/
-├── app/
+├── 📱 app/
 │   ├── build.gradle.kts
 │   ├── proguard-rules.pro
 │   │
@@ -141,16 +142,16 @@ CashGuard/
 │       │   ├── AndroidManifest.xml
 │       │   │
 │       │   ├── java/com/example/cashguard/
-│       │   │   ├── LoginActivity.kt
-│       │   │   ├── RegisterActivity.kt
-│       │   │   ├── DashboardActivity.kt
-│       │   │   ├── ReportsActivity.kt
-│       │   │   ├── TransactionsActivity.kt
-│       │   │   ├── HistoryActivity.kt
-│       │   │   ├── TotalSavingsActivity.kt
-│       │   │   ├── TotalSpendingActivity.kt
-│       │   │   ├── ProfileActivity.kt
-│       │   │   ├── UserProfileActivity.kt
+│       │   │   ├── 🔐 LoginActivity.kt
+│       │   │   ├── 📝 RegisterActivity.kt
+│       │   │   ├── 🏠 DashboardActivity.kt
+│       │   │   ├── 📊 ReportsActivity.kt
+│       │   │   ├── 💳 TransactionsActivity.kt
+│       │   │   ├── 📜 HistoryActivity.kt
+│       │   │   ├── 💰 TotalSavingsActivity.kt
+│       │   │   ├── 💸 TotalSpendingActivity.kt
+│       │   │   ├── 👤 ProfileActivity.kt
+│       │   │   ├── 👤 UserProfileActivity.kt
 │       │   │   │
 │       │   │   ├── UserManager.kt
 │       │   │   ├── FinanceManager.kt
@@ -170,12 +171,13 @@ CashGuard/
 │       ├── test/
 │       └── androidTest/
 │
-├── gradle/
+├── ⚙️ gradle/
 ├── build.gradle.kts
 ├── gradle.properties
 ├── settings.gradle.kts
 ├── gradlew
-└── README.md
+└── 📖 README.md
+```
 
   
 
